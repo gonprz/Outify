@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 16px;
+    padding: 10px 24px;
+    margin-top: 44px;
+}
+
+.logoTexto h1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    size: 24px;
+    color: #2F2D2E;
+}
+
+.iconosHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: #2F2D2E;
+}
+
+.logoTexto h1 span {
+    border-bottom: 2px solid #85877C;
+    padding-bottom: 1px;
+}
