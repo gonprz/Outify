@@ -106,3 +106,93 @@ header {
     display: flex;
     padding: 0px 24px;
 }
+
+.seccionSubastasActivas {
+    padding: 0 24px;
+    margin-top: 24px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.seccionSubastasActivas .h3 {
+    color: #2F2D2E;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 14px 0;
+    padding: 0;
+}
+
+.tablaSubastas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.tablaSubastas tr {
+    height: 75px;
+}
+
+.celdaImagen {
+    width: 75px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.imgPrenda {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    display: block;
+    background-color: #D8D7DD;
+}
+
+.celdaInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 42px;                  
+    padding: 0 12px 0 16px;
+    box-sizing: border-box;
+    align-self: center;            
+}
+
+.NombrePrenda {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2F2D2E;
+    line-height: 1.1;
+}
+
+.pujaActual {
+    margin: 0;
+    font-size: 14px;
+    color: #2F2D2E;
+    line-height: 1;
+}
+
+.celdaBtn {
+    padding: 0;
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btnGestion {
+    background-color: #0582CA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.lineaHorizontal {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #2F2D2E;
+}
