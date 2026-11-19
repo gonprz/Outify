@@ -209,6 +209,7 @@ dialog {
 
 dialog::backdrop {
     background-color: #2F2D2E;
+    opacity: 50%;
 }
 
 .btnCerrar {
