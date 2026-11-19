@@ -31,3 +31,78 @@ header {
     border-bottom: 2px solid #85877C;
     padding-bottom: 1px;
 }
+
+.iconosHeaderPerfil {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    gap: 12px;
+    margin: 0;
+    color: #2F2D2E;
+}
+
+.iconosHeaderPerfil svg:first-child {
+    margin-right: auto;
+}
+
+.fotoDePerfil {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contenedorImagenDePerfil {
+    display: flex;
+      flex-direction: column; 
+      align-items: center;    
+      gap: 12px;              
+      margin-top: 10px;
+      font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.nombreDePerfil {
+    margin: 0;
+    font-size: 20px;
+    color: #2F2D2E;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+.estadisticas {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.estadisticas li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0; 
+}
+
+.statNumero {
+  margin: 0;
+  line-height: 0;  
+  font-size: 20px;
+  color: #2F2D2E;
+}
+
+.statEtiqueta {
+  margin: -6px 0 0 0;
+  line-height: 4;
+  font-size: 14px;
+  color: #2F2D2E;
+}
+
+.h3 {
+    color: #2F2D2E;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    display: flex;
+    padding: 0px 24px;
+}
