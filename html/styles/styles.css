@@ -196,3 +196,24 @@ header {
     margin-bottom: 30px;
     color: #2F2D2E;
 }
+
+dialog {
+    border: none;
+    border-radius: 14px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #2F2D2E;
+}
+
+dialog::backdrop {
+    background-color: #2F2D2E;
+}
+
+.btnCerrar {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}

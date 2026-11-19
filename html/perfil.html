@@ -55,23 +55,28 @@
         </section>
         <section class="seccionSubastasActivas">
             <p class="h3">Subastas Activas</p>
-            <table class="tablaSubastas" width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td class="celdaImagen">
-                        <img src="assets/img/PantalonesImagen.jpg" alt="imagenPantalon" class="imgPrenda">
-                    </td>
-                    <td class="celdaInfo">
-                        <p class="nombrePrenda">Rock Revival Broken Road...</p>
-                        <p class="pujaActual">125€</p>
-                    </td>
-                    <td class="celdaBtn">
-                        <button type="button" class="btnGestion">Gestión</button>
-                    </td>
-                </tr>
-            </table>
+            <button type="button" class="btnGestion" id="btnGestion">Gestión</button>
         </section>
+        <dialog id="ventanaLista">
+            <header>
+                <h2>Mis Subastas</h2>
+                <form method="dialog">
+                    <button type="submit" class="btnCerrar">X</button>
+                </form>
+            </header>
+            <ul id="listaSubastas"></ul>
+        </dialog>
+
+        <dialog id="ventanaTarjeta">
+            <form method="dialog">
+                <button type="submit" class="btnCerrar">X</button>
+            </form>
+            <article id="tarjetaSubasta"></article>
+        </dialog>
         
         <hr class="lineaHorizontal">
+
+        <script type="module" src="js/main.js"></script>
 
     </body>
 </html>
