@@ -5,6 +5,7 @@ Este proyecto usa módulos de JavaScript, así que para que todo funcione como d
 ## Backlog
 
 | Prioridad | Pieza | Descripción | Estado |
+| --- | --- | --- | --- |
 | 1 | Lista de subastas del perfil | El botón de Gestión abre una ventana con todas las subastas del usuario, filtradas usando "idVendedor" | Hecho |
 | 2 | Tarjeta de detalle | Al pulsar una subasta de la lista, esta abre su ficha con nombre, descripción y puja actual | Hecho |
 | 3 | Menú de navegación | Footer con enlaces a todas las secciones | Hecho |
