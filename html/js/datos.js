@@ -133,5 +133,13 @@ export const subastas = [
         marca: "Rick Owens",
         pujaActual: 700,
         idVendedor: 1
+    },
+    {
+        id: 11,
+        nombre: "Cinch XL Colossus Jeans",
+        descripcion: "Pantalones vaqueros muy baggys con diseño rojo en la parte frontal",
+        marca: "Jaded London",
+        pujaActual: 120,
+        idVendedor: 1
     }
 ];
