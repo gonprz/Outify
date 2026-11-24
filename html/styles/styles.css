@@ -345,3 +345,143 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+/* Estilos de los elementos de la segunda entrega para DWEC */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 24px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #2F2D2E;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    font-family: inherit;
+    font-size: 15px;
+    color: #2F2D2E;
+    background-color: #FFFFFF;
+    border: 1px solid #85877C;
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.campo input:focus-visible,
+.campo select:focus-visible,
+.campo textarea:focus-visible,
+button:focus-visible {
+    outline: 2px solid #0582CA;
+    outline-offset: 2px;
+}
+
+.campo [aria-invalid="true"] {
+    border-color: #B3261E;
+}
+
+.ayudaCampo {
+    margin: 0;
+    font-size: 12px;
+    color: #2F2D2E;
+}
+
+.mensajeError {
+    margin: 0;
+    font-size: 12px;
+    color: #B3261E;
+    min-height: 0;
+}
+
+.mensajeError:empty {
+    display: none;
+}
+
+.campoCasilla {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.campoCasilla input {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+}
+
+.campoCasilla .mensajeError {
+    grid-column: 1 / -1;
+}
+
+.accionesFormulario {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.btnPrimario,
+.btnSecundario,
+.btnPeligro {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btnPrimario {
+    background-color: #0582CA;
+    color: #FFFFFF;
+    border: 1px solid #0582CA;
+}
+
+.btnSecundario {
+    background-color: transparent;
+    color: #2F2D2E;
+    border: 1px solid #2F2D2E;
+}
+
+.btnPeligro {
+    background-color: #B3261E;
+    color: #FFFFFF;
+    border: 1px solid #B3261E;
+}
+
+.filaUsuario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #2F2D2E;
+}
+
+.filaUsuario .filaInfo p {
+    margin: 0 0 4px 0;
+}
+
+.filaAcciones {
+    display: flex;
+    gap: 8px;
+}
+
+.textoVacio {
+    padding: 0 24px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Outify - Registro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+
+    <body>
+        <header class="cabecera">
+            <nav class="cabeceraNav" aria-label="Cabecera">
+                <a href="perfil.html" aria-label="Volver al perfil">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 18L4 12L10 6M4 12H14.5M20 12H17.5" />
+                    </svg>
+                </a>
+                <h1 class="tituloPagina">Registro</h1>
+                <span aria-hidden="true" style="width: 24px;"></span>
+            </nav>
+        </header>
+
+        <main>
+            <section aria-labelledby="tituloFormulario">
+                <h2 class="subtitulo" id="tituloFormulario">Crear cuenta</h2>
+
+                <form id="formRegistro" class="formulario" novalidate>
+                    <div class="campo">
+                        <label for="nombre">Nombre de usuario</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="20"
+                               autocomplete="username" aria-describedby="error-nombre">
+                        <p class="mensajeError" id="error-nombre"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required
+                               autocomplete="email" aria-describedby="error-correo">
+                        <p class="mensajeError" id="error-correo"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required minlength="8"
+                               autocomplete="new-password" aria-describedby="ayuda-password error-password">
+                        <p class="ayudaCampo" id="ayuda-password">Mínimo 8 caracteres, una mayúscula y un número.</p>
+                        <p class="mensajeError" id="error-password"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="repetirPassword">Repetir contraseña</label>
+                        <input type="password" id="repetirPassword" name="repetirPassword" required
+                               autocomplete="new-password" aria-describedby="error-repetirPassword">
+                        <p class="mensajeError" id="error-repetirPassword"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required
+                               data-edad-minima="18" aria-describedby="error-fechaNacimiento">
+                        <p class="mensajeError" id="error-fechaNacimiento"></p>
+                    </div>
+
+                    <div class="campo campoCasilla">
+                        <input type="checkbox" id="condiciones" name="condiciones" required
+                               aria-describedby="error-condiciones">
+                        <label for="condiciones">Acepto las condiciones de uso</label>
+                        <p class="mensajeError" id="error-condiciones"></p>
+                    </div>
+
+                    <div class="accionesFormulario">
+                        <button type="submit" class="btnPrimario" id="btnGuardar">Registrarme</button>
+                        <button type="button" class="btnSecundario" id="btnCancelar" hidden>Cancelar edición</button>
+                    </div>
+                </form>
+            </section>
+
+            <hr class="lineaHorizontal">
+
+            <section aria-labelledby="tituloUsuarios">
+                <h2 class="subtitulo" id="tituloUsuarios">Usuarios</h2>
+                <p class="ayudaCampo textoVacio" id="sinUsuarios">Todavía no hay usuarios registrados.</p>
+                <ul class="listaPagina" id="listaUsuarios"></ul>
+            </section>
+        </main>
+
+        <dialog id="dialogoBorrar" aria-labelledby="tituloDialogoBorrar">
+            <h3 id="tituloDialogoBorrar">Borrar usuario</h3>
+            <p id="textoDialogoBorrar"></p>
+            <div class="accionesFormulario">
+                <button type="button" class="btnPeligro" id="btnConfirmarBorrar">Borrar</button>
+                <button type="button" class="btnSecundario" id="btnCancelarBorrar">Cancelar</button>
+            </div>
+        </dialog>
+
+        <footer>
+            <nav aria-label="Menú principal">
+                <ul>
+                    <li>
+                        <a href="crear.html" aria-label="Publicar">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                                    <path d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15" />
+                                    <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mensajeria.html" aria-label="Mensajes">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M17 3.33782C15.5291 2.48697 13.8214 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88836 21.6244 10.4003 22 12 22C17.5228 22 22 17.5228 22 12C22 10.1786 21.513 8.47087 20.6622 7" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subastas.html" aria-label="Subastas">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                                    <path d="M20.232 10.5257C19.6468 7.40452 19.3542 5.84393 18.2433 4.92196C17.1324 4 15.5446 4 12.369 4H11.6479C8.47228 4 6.8845 4 5.7736 4.92196C4.66271 5.84393 4.37009 7.40452 3.78487 10.5257C2.96195 14.9146 2.55049 17.1091 3.75011 18.5545C4.94973 20 7.18244 20 11.6478 20H12.369C16.8344 20 19.0672 20 20.2668 18.5545C20.9628 17.7159 21.1165 16.6252 20.9621 15" />
+                                    <path d="M9.1709 8C9.58273 9.16519 10.694 10 12.0002 10C13.3064 10 14.4177 9.16519 14.8295 8" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="perfil.html" aria-label="Perfil" aria-current="page">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                                    <circle cx="12" cy="9" r="3" />
+                                    <path d="M17.9696 20C17.8105 17.1085 16.9252 15 12.0004 15C7.0757 15 6.1904 17.1085 6.03125 20" />
+                                    <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+        <script type="module" src="js/registro.js"></script>
+    </body>
+</html>
