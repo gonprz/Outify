@@ -92,3 +92,40 @@ export function validarFechaDeNacimiento(valor, edadMinima) {
 export function validarCondiciones(marcada) {
     return marcada ? null : "Debes aceptar las condiciones.";
 }
+
+const REGEX_TELEFONO = /^(\+34|0034)?[6-9]\d{8}$/;
+
+export function validarTelefono(valor, obligatorio = false) {
+    const limpio = valor.replace(/[\s.\-()]/g, "");
+
+    if (limpio === "") {
+        return obligatorio ? "Si prefieres que te llamemos, el teléfono es obligatorio" : null;
+    }
+
+    if (!REGEX_TELEFONO.test(limpio)) {
+        return "Introduce un teléfono válido";
+    }
+    return null;
+}
+
+export function validarMotivo(valor) {
+    return valor === "" ? "Elige un motivo" : null;
+}
+
+export function validarMensaje(valor, min, max) {
+    const errorObligatorio = validarObligatorio(valor);
+    if (errorObligatorio) {
+      return errorObligatorio      
+    }
+
+    const limpio = valor.trim();
+    if (min > 0 && limpio.length < min) {
+        return "El mensaje es demasiado corto";
+    }
+
+    if (max > 0 && limpio.length > max) {
+        return "El mensaje es demasiado largo";
+    }
+
+    return null;
+}
